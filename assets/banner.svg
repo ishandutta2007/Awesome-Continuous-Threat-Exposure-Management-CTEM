@@ -23,34 +23,38 @@
       <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
     </linearGradient>
 
+    <!-- Radial Glow Gradients for Native SVG High Performance -->
+    <radialGradient id="radial-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#00f2fe" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="radial-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7928ca" stop-opacity="0.4" />
+      <stop offset="60%" stop-color="#7928ca" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#7928ca" stop-opacity="0" />
+    </radialGradient>
+
     <!-- Grid Pattern -->
     <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 242, 254, 0.05)" stroke-width="1" />
       <circle cx="40" cy="40" r="1" fill="rgba(0, 242, 254, 0.15)" />
     </pattern>
 
-    <!-- Filters -->
-    <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-
-    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="35" result="blur" />
-    </filter>
-
     <style>
+      <![CDATA[
       .title-text {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         font-weight: 800;
-        font-size: 40px;
+        font-size: 38px;
         letter-spacing: -0.5px;
         fill: #ffffff;
       }
       .subtitle-text {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         font-weight: 500;
-        font-size: 19px;
+        font-size: 18px;
         letter-spacing: 0.2px;
         fill: #94a3b8;
       }
@@ -61,14 +65,14 @@
         fill: #38bdf8;
       }
 
-      /* Dynamic Wave & Orbit Animations */
+      /* Dynamic Wave and Orbit Animations */
       @keyframes pulseGlow {
         0%, 100% { opacity: 0.3; transform: scale(1); }
-        50% { opacity: 0.55; transform: scale(1.08); }
+        50% { opacity: 0.6; transform: scale(1.08); }
       }
       @keyframes floatParticle {
         0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
-        50% { transform: translateY(-25px) translateX(15px); opacity: 0.7; }
+        50% { transform: translateY(-20px) translateX(12px); opacity: 0.7; }
         100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
       }
       @keyframes dashFlow {
@@ -80,11 +84,11 @@
       }
 
       .animated-glow-1 {
-        transform-origin: 200px 100px;
+        transform-origin: 220px 110px;
         animation: pulseGlow 7s ease-in-out infinite;
       }
       .animated-glow-2 {
-        transform-origin: 1000px 300px;
+        transform-origin: 1020px 300px;
         animation: pulseGlow 9s ease-in-out infinite reverse;
       }
       .stream-line {
@@ -98,6 +102,7 @@
         transform-origin: 1050px 120px;
         animation: radarSweep 8s linear infinite;
       }
+      ]]>
     </style>
   </defs>
 
@@ -105,10 +110,9 @@
   <rect width="100%" height="100%" fill="url(#bg-grad)" />
   <rect width="100%" height="100%" fill="url(#cyber-grid)" />
 
-  <!-- Dynamic Background Orbs (Behind text) -->
-  <circle cx="220" cy="110" r="160" fill="#00f2fe" opacity="0.22" filter="url(#glow-heavy)" class="animated-glow-1" />
-  <circle cx="1020" cy="300" r="180" fill="#7928ca" opacity="0.25" filter="url(#glow-heavy)" class="animated-glow-2" />
-  <circle cx="600" cy="210" r="120" fill="#0284c7" opacity="0.12" filter="url(#glow-heavy)" />
+  <!-- Dynamic Ambient Orbs (Background) -->
+  <circle cx="220" cy="110" r="220" fill="url(#radial-cyan)" class="animated-glow-1" />
+  <circle cx="1020" cy="300" r="240" fill="url(#radial-purple)" class="animated-glow-2" />
 
   <!-- Dynamic Cyber Attack Path / Flow Lines (Background) -->
   <g opacity="0.45">
@@ -130,14 +134,14 @@
     <circle cx="1050" cy="120" r="20" fill="none" stroke="#0284c7" stroke-width="1" />
     <line x1="980" y1="120" x2="1120" y2="120" stroke="#0284c7" stroke-width="0.8" />
     <line x1="1050" y1="50" x2="1050" y2="190" stroke="#0284c7" stroke-width="0.8" />
-    <line x1="1050" y1="120" x2="1105" y2="85" stroke="#38bdf8" stroke-width="2" class="radar-sweep" filter="url(#glow-blur)" />
+    <line x1="1050" y1="120" x2="1105" y2="85" stroke="#38bdf8" stroke-width="2" class="radar-sweep" />
   </g>
 
   <!-- Top Category Tag / Pill (Foreground) -->
   <g transform="translate(100, 52)">
     <rect width="270" height="32" rx="16" fill="url(#badge-grad)" stroke="#0284c7" stroke-width="1.2" />
-    <circle cx="18" cy="16" r="5" fill="#00f2fe" filter="url(#glow-blur)" />
-    <circle cx="18" cy="16" r="3" fill="#ffffff" />
+    <circle cx="18" cy="16" r="4" fill="#00f2fe" />
+    <circle cx="18" cy="16" r="2" fill="#ffffff" />
     <text x="34" y="21" class="badge-label">CURATED SECURITY ARCHIVE</text>
   </g>
 
