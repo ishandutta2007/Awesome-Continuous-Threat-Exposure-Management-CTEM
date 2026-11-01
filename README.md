@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discordl&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Continuous-Threat-Exposure-Management-CTEM/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Continuous-Threat-Exposure-Management-CTEM?style=flat-square&logo=github&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Continuous-Threat-Exposure-Management-CTEM/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Continuous-Threat-Exposure-Management-CTEM?style=flat-square&logo=github&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Continuous-Threat-Exposure-Management-CTEM/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Continuous-Threat-Exposure-Management-CTEM?style=flat-square&logo=github&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Continuous-Threat-Exposure-Management-CTEM/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -81,11 +81,11 @@ The following commercial CTEM platforms and exposure management engines are rank
 
 To assemble a self-hosted Continuous Threat Exposure Management pipeline, security teams rely on specialized open-source tools across all 5 CTEM stages (Asset Discovery, Vulnerability Analysis, Attack Path Mapping, Exposure Validation, and Unified Prioritization).
 
-The repositories below are ranked in **descending order by GitHub star count**. Each badge links directly to the repository's stargazers page:
+The repositories below are ranked in **descending order by GitHub Stars_Count**. Each badge links directly to the repository's stargazers page:
 
-### 🏆 Top Open-Source Projects (Ranked by Stars ⭐)
+### 🏆 Top Open-Source Projects (Ranked by GitHub_Stars ⭐)
 
-| 📦 Repository & Project | ⭐ GitHub Stars | 🎯 CTEM Stage & Domain | 💡 Key Features & Exposure Value |
+| 📦 Repository & Project | ⭐ GitHub_Stars | 🎯 CTEM Stage & Domain | 💡 Key Features & Exposure Value |
 | :--- | :--- | :--- | :--- |
 | **[rapid7/metasploit-framework](https://github.com/rapid7/metasploit-framework)** | [![Stars](https://img.shields.io/github/stars/rapid7/metasploit-framework?style=social&color=white)](https://github.com/rapid7/metasploit-framework/stargazers) | **Validation** ⚔️<br>Penetration Testing | World's premier exploitation and validation framework; enables SecOps to confirm whether detected vulnerabilities can be actively weaponized. |
 | **[aquasecurity/trivy](https://github.com/aquasecurity/trivy)** | [![Stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers) | **Discovery** 🔍<br>Cloud & Container Exposure | Comprehensive scanner for container images, file systems, Git repositories, Kubernetes configurations, and cloud infrastructure misconfigurations. |
@@ -119,8 +119,8 @@ Contributions are warmly encouraged! Help expand this resource to keep Continuou
 2. 🌿 **Create a feature branch**: `git checkout -b feature/new-ctem-tool`.
 3. 📝 **Add or update an entry** in `README.md`:
    - Follow the established table formatting.
-   - For open-source tools, include the official GitHub star badge formatted as `[![Stars](https://img.shields.io/github/stars/{owner}/{repo}?style=social&color=white)](https://github.com/{owner}/{repo}/stargazers)`.
-   - Ensure the repository is inserted in its correct position based on total star count.
+   - For open-source tools, include the official GitHub Stars_Badge formatted as `[![Stars](https://img.shields.io/github/stars/{owner}/{repo}?style=social&color=white)](https://github.com/{owner}/{repo}/stargazers)`.
+   - Ensure the repository is inserted in its correct position based on total Stars_Count.
 4. 🚀 **Commit your changes**: `git commit -m "Add new CTEM project"`.
 5. 📬 **Open a Pull Request** with a concise description of the tool and why it aligns with the CTEM framework.
 
