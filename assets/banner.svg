@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7928ca" />
+      <stop offset="100%" stop-color="#ff0080" />
+    </linearGradient>
+
+    <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 242, 254, 0.05)" stroke-width="1" />
+      <circle cx="40" cy="40" r="1" fill="rgba(0, 242, 254, 0.15)" />
+    </pattern>
+
+    <!-- Filters -->
+    <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="35" result="blur" />
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        letter-spacing: -0.5px;
+        fill: #ffffff;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 500;
+        font-size: 19px;
+        letter-spacing: 0.2px;
+        fill: #94a3b8;
+      }
+      .badge-label {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #38bdf8;
+      }
+
+      /* Dynamic Wave & Orbit Animations */
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.55; transform: scale(1.08); }
+      }
+      @keyframes floatParticle {
+        0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+        50% { transform: translateY(-25px) translateX(15px); opacity: 0.7; }
+        100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+      }
+      @keyframes dashFlow {
+        to { stroke-dashoffset: -40; }
+      }
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .animated-glow-1 {
+        transform-origin: 200px 100px;
+        animation: pulseGlow 7s ease-in-out infinite;
+      }
+      .animated-glow-2 {
+        transform-origin: 1000px 300px;
+        animation: pulseGlow 9s ease-in-out infinite reverse;
+      }
+      .stream-line {
+        stroke-dasharray: 8, 12;
+        animation: dashFlow 2.5s linear infinite;
+      }
+      .particle-1 { animation: floatParticle 5s ease-in-out infinite; }
+      .particle-2 { animation: floatParticle 7s ease-in-out infinite 1.5s; }
+      .particle-3 { animation: floatParticle 6s ease-in-out infinite 3s; }
+      .radar-sweep {
+        transform-origin: 1050px 120px;
+        animation: radarSweep 8s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" />
+  <rect width="100%" height="100%" fill="url(#cyber-grid)" />
+
+  <!-- Dynamic Background Orbs (Behind text) -->
+  <circle cx="220" cy="110" r="160" fill="#00f2fe" opacity="0.22" filter="url(#glow-heavy)" class="animated-glow-1" />
+  <circle cx="1020" cy="300" r="180" fill="#7928ca" opacity="0.25" filter="url(#glow-heavy)" class="animated-glow-2" />
+  <circle cx="600" cy="210" r="120" fill="#0284c7" opacity="0.12" filter="url(#glow-heavy)" />
+
+  <!-- Dynamic Cyber Attack Path / Flow Lines (Background) -->
+  <g opacity="0.45">
+    <path d="M 50 80 Q 300 20 600 90 T 1150 60" fill="none" stroke="url(#cyan-glow)" stroke-width="1.5" class="stream-line" />
+    <path d="M 80 360 Q 400 410 750 330 T 1120 370" fill="none" stroke="url(#purple-glow)" stroke-width="1.5" class="stream-line" style="animation-duration: 3.5s;" />
+  </g>
+
+  <!-- Floating Ambient Nodes -->
+  <circle cx="150" cy="140" r="3" fill="#38bdf8" class="particle-1" />
+  <circle cx="280" cy="60" r="2.5" fill="#a855f7" class="particle-2" />
+  <circle cx="920" cy="80" r="3.5" fill="#00f2fe" class="particle-3" />
+  <circle cx="1080" cy="240" r="2.5" fill="#f43f5e" class="particle-1" />
+  <circle cx="70" cy="290" r="3" fill="#38bdf8" class="particle-2" />
+
+  <!-- CTEM Radar Display Motif in Upper Right (Non-intrusive) -->
+  <g opacity="0.35">
+    <circle cx="1050" cy="120" r="60" fill="none" stroke="#0284c7" stroke-width="1" stroke-dasharray="3,3" />
+    <circle cx="1050" cy="120" r="40" fill="none" stroke="#0284c7" stroke-width="1" />
+    <circle cx="1050" cy="120" r="20" fill="none" stroke="#0284c7" stroke-width="1" />
+    <line x1="980" y1="120" x2="1120" y2="120" stroke="#0284c7" stroke-width="0.8" />
+    <line x1="1050" y1="50" x2="1050" y2="190" stroke="#0284c7" stroke-width="0.8" />
+    <line x1="1050" y1="120" x2="1105" y2="85" stroke="#38bdf8" stroke-width="2" class="radar-sweep" filter="url(#glow-blur)" />
+  </g>
+
+  <!-- Top Category Tag / Pill (Foreground) -->
+  <g transform="translate(100, 52)">
+    <rect width="270" height="32" rx="16" fill="url(#badge-grad)" stroke="#0284c7" stroke-width="1.2" />
+    <circle cx="18" cy="16" r="5" fill="#00f2fe" filter="url(#glow-blur)" />
+    <circle cx="18" cy="16" r="3" fill="#ffffff" />
+    <text x="34" y="21" class="badge-label">CURATED SECURITY ARCHIVE</text>
+  </g>
+
+  <!-- Main Headline Title (Foreground) -->
+  <g transform="translate(100, 142)">
+    <text class="title-text">
+      Continuous Threat Exposure Management
+    </text>
+    <text y="50" class="title-text" fill="url(#cyan-glow)">
+      Awesome CTEM Ecosystem
+    </text>
+  </g>
+
+  <!-- Subtitle (Foreground) -->
+  <g transform="translate(100, 240)">
+    <text class="subtitle-text">
+      Attack Surface Management • Adversarial Validation • Attack Path Discovery • Risk Prioritization
+    </text>
+  </g>
+
+  <!-- CTEM 5-Stage Methodology Workflow Pills (Foreground) -->
+  <g transform="translate(100, 290)">
+    <!-- Stage 1 -->
+    <rect x="0" y="0" width="130" height="42" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <text x="65" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-weight="700" font-size="13" fill="#38bdf8">1. SCOPE</text>
+
+    <!-- Arrow -->
+    <path d="M 142 21 L 158 21 M 153 16 L 158 21 L 153 26" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Stage 2 -->
+    <rect x="170" y="0" width="145" height="42" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <text x="242" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-weight="700" font-size="13" fill="#60a5fa">2. DISCOVER</text>
+
+    <!-- Arrow -->
+    <path d="M 327 21 L 343 21 M 338 16 L 343 21 L 338 26" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Stage 3 -->
+    <rect x="355" y="0" width="145" height="42" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <text x="427" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-weight="700" font-size="13" fill="#a78bfa">3. PRIORITIZE</text>
+
+    <!-- Arrow -->
+    <path d="M 512 21 L 528 21 M 523 16 L 528 21 L 523 26" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Stage 4 -->
+    <rect x="540" y="0" width="140" height="42" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+    <text x="610" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-weight="700" font-size="13" fill="#f43f5e">4. VALIDATE</text>
+
+    <!-- Arrow -->
+    <path d="M 692 21 L 708 21 M 703 16 L 708 21 L 703 26" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Stage 5 -->
+    <rect x="720" y="0" width="140" height="42" rx="8" fill="#0f172a" stroke="#0284c7" stroke-width="1.5" />
+    <text x="790" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-weight="700" font-size="13" fill="#38bdf8">5. MOBILIZE</text>
+  </g>
+
+  <!-- Border Gradient Stroke -->
+  <rect x="1" y="1" width="1198" height="418" rx="8" fill="none" stroke="url(#cyan-glow)" stroke-width="1.2" opacity="0.3" />
+</svg>
