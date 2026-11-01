@@ -34,79 +34,30 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The Continuous Threat Exposure Management (CTEM) and exposure management market is estimated at **$1.3B to $2.7B in 2025** and projected to reach **$1.5B to $3.5B in 2026** (growing at ~11–13% CAGR) as enterprises shift away from static vulnerability scans toward continuous validation. The market exhibits a **moderately fragmented and transitional structure**—anchored by a concentrated core of large public incumbents (CrowdStrike, Tenable, Qualys, Rapid7) capturing high-volume enterprise spend, alongside a vibrant, fragmented periphery of specialized point-solution innovators and validation startups.
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[CrowdStrike Falcon Exposure Management](https://www.crowdstrike.com/)**
-
-  **CTEM platform** driven by real-time Falcon telemetry rather than periodic scans. **ExPRT.AI** predicts exploitability using real-world vulnerability exploitation data; focuses resources on the **5% of exposures most likely to be exploited** . **Pricing**: CDW lists **$126.99/year** for Tier 2 (150–299) single license ; enterprise bundles quote-based. **Free tier**: None. **Best for**: CrowdStrike customers wanting CTEM grounded in live endpoint telemetry—**trade-off**: requires Falcon agent on endpoints; blind to assets without Falcon .
-
-
-
-- **[Tenable ExposureAI](https://www.tenable.com/)**
-
-  **Generative AI-powered exposure management** built on Tenable's **Exposure Graph**. **AI Exposure** extends visibility to AI workloads with dashboard, issues, explorer, and policies . **Pricing**: **Flexible pricing and packaging introduced April 2026** for new customers—predictable spend, simplified procurement, faster time-to-value . Quote-only for specific tiers. **Free tier**: Trial available. **Best for**: Tenable customers wanting AI-assisted prioritization with simplified buying—**trade-off**: AI Exposure is an add-on category; validate budget adoption .
-
-
-
-- **[XM Cyber](https://xmcyber.com/)**
-
-  **Hybrid cloud exposure management** using attack path analysis. **Continuous Exposure Management (CEM)** identifies attack paths, prioritizes based on risk to critical assets, and mobilizes remediation. AWS Marketplace lists **XM CEM Medium Enterprise Network at $350,000/year** ; Taiwan pricing table shows **CEM for Cloud (100–1000 assets) at ~$14,250–$14,408** . **Free tier**: None. **Best for**: enterprises wanting attack path visualization—**trade-off**: six-figure enterprise pricing; cloud analysis dependency.
-
-
-
-- **[Rapid7 Exposure Command](https://www.rapid7.com/)**
-
-  **Unified exposure management** named a **Leader in the 2025 Gartner Magic Quadrant for Exposure Assessment Platforms**. **Pricing**: **Asset-based, pay for what you use**—pricing reflects asset types and use cases in scope; **not publicly listed**, typically custom quotes; annual subscriptions with volume discounts . **Free tier**: None. **Best for**: organizations wanting a Gartner-validated CTEM platform with flexible asset-based pricing—**trade-off**: requires custom quote; asset modeling required.
-
-
-
-- **[Qualys VMDR with TruRisk](https://www.qualys.com/)**
-
-  **Cloud-native vulnerability management and exposure platform** with **TruRisk** scoring. CDW lists **Qualys VMDR TruRisk at $4,415.99** . **Free tier**: Trial available. **Best for**: organizations wanting mature vulnerability management with TruRisk prioritization as the foundation for CTEM—**trade-off**: CTEM is an evolution of VMDR, not a purpose-built CTEM workflow.
-
-
-
-- **[Picus Security Validation Platform](https://www.picussecurity.com/)**
-
-  **Security validation platform** unifying exposure management through **adversarial exposure validation**. **Pricing**: **Available upon request** per Software Advice ; free trial and free version listed. **Free tier**: Trial available. **Best for**: teams wanting to validate which exposures are actually exploitable before remediation—**trade-off**: validation-focused; requires integration with existing scanners.
-
-
-
-- **[Cymulate](https://cymulate.com/)**
-
-  **Exposure validation and security posture platform** with breach and attack simulation. **Pricing**: **Quote-only**; Genesee County signed a Cymulate agreement in August 2026 for platform licensing, onboarding, and support . **Free tier**: None. **Best for**: teams wanting to validate exploitability and communicate risk—**trade-off**: simulation-focused; not a full CTEM workflow platform.
-
-
-
-- **[Hadrian](https://hadrian.io/)**
-
-  **Agentic offensive security platform** operationalizing CTEM. **Atlas** continuously monitors external exposure; **Nova** runs AI agents through applications on demand. **Nova available from €1,250 per test** (excluding VAT) . Raised **$40M in October 2026** . **Free tier**: None. **Best for**: enterprises wanting continuous, autonomous external attack surface validation—**trade-off**: Nova is per-test pricing; Atlas enterprise quote required.
-
-
-
-- **[Balbix](https://www.balbix.com/)** (**Acquired by SAFE**)
-
-  **AI-native exposure discovery and assessment** platform. **Acquired by SAFE in November 2025**; now part of SAFE's unified platform combining AI-SPM, TPRM, CTEM, and CRQ . **Pricing**: **Custom quote**; **no free trial, no free plan** . **Free tier**: None. **Best for**: historical reference—evaluate SAFE's integrated offering instead.
-
-
-
-- **[Skybox Security](https://www.skyboxsecurity.com/)**
-
-  **Security posture management** with network mapping and firewall assurance. **Skybox CertiFire** available at **€595 per firewall per year** for a 10-license pack . **Free tier**: None. **Best for**: organizations prioritizing network-centric exposure visibility and firewall rule analysis—**trade-off**: CertiFire is firewall-focused; broader CTEM requires additional modules.
-
-
+| Platform | Company Scale (Revenue / Valuation) | Focus & Key Capabilities | Specific Pricing | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- | :--- |
+| **[CrowdStrike Falcon Exposure Management](https://www.crowdstrike.com/)** | **~$250B+ Market Cap**<br>($4.8B FY26 Revenue) | Telemetry-driven CTEM via Falcon agent; ExPRT.AI predicts exploitability across live endpoints. | Starting at **$126.99/year** per license (Tier 2: 150–299 assets, CDW listing); enterprise packages custom. | **15-day free trial**; includes Falcon Prevent NGAV, Device Control, and mobile protection (no credit card required). |
+| **[Qualys VMDR with TruRisk](https://www.qualys.com/)** | **~$7.6B Market Cap**<br>(~$669M Revenue) | Cloud-native vulnerability management & exposure prioritization with TruRisk risk-scoring engine. | Starting at **$4,415.99/year** (CDW baseline package); volume tiers scale per managed IP/asset. | **30-day free trial**; grants full-featured evaluation across the Enterprise TruRisk Platform for test environments. |
+| **[Tenable ExposureAI](https://www.tenable.com/)** | **~$4.5B Market Cap**<br>(~$995M Revenue) | Generative AI-powered exposure management built on Exposure Graph; extends visibility into AI workloads. | Starting at **$3,700/year** for 100 assets (~$37/asset/yr base VM); Tenable One suites range **$55–$90/asset/yr**. | **30-day free trial** for enterprise cloud platforms (or 7-day trial for standalone Nessus; non-commercial Nessus Essentials free for up to 5 IPs). |
+| **[Rapid7 Exposure Command](https://www.rapid7.com/)** | **~$1.0B Market Cap**<br>(~$860M Revenue) | Unified exposure management combining CAASM, EASM, and posture management (Gartner Leader). | Baseline asset tiers start around **$1.60–$2.00/asset/month** (~$19–$24/asset/yr via InsightVM foundation); Exposure Command bundles scale per asset. | **No permanent free tier**; 30-day guided POC / proof-of-value available upon sales qualification (self-serve trial limited to point modules like InsightAppSec). |
+| **[XM Cyber](https://xmcyber.com/)** | **$700M Valuation**<br>(Acquired by Schwarz Group; $140B+ parent revenue) | Hybrid cloud exposure management focusing on attack path analysis and critical asset choke points. | Cloud tiers start at **~$14,250–$14,408/year** (100–1,000 assets); AWS Marketplace lists Medium Enterprise at **$350,000/year**. | **14-day free trial / Proof of Value (PoV)**; full-feature access to simulate and analyze attack paths across scoping boundary. |
+| **[Cymulate](https://cymulate.com/)** | **~$500M Valuation**<br>(~$30M–$50M ARR) | Continuous security validation, breach and attack simulation (BAS), and exposure risk posture assessment. | Starting at **$1,500/month** (~$18,000/yr) for single vectors; full multi-vector 1,000-endpoint packages start at **~$91,000/year**. | **14-day free trial**; provides simulated attack evaluation and risk report across selected test vectors. |
+| **[Picus Security Validation Platform](https://www.picussecurity.com/)** | **~$250M–$500M Valuation**<br>(~$40M–$50M ARR) | Adversarial exposure validation proving exploitability before remediation; integrates with existing scanners. | Entry annual deployments start around **$20,000–$30,000/year** based on network choke points and simulated vectors. | **14-day free trial**; self-serve attack simulation across limited test vectors and integrations. |
+| **[Balbix](https://www.balbix.com/)** *(Acquired by SAFE)* | **~$250M–$500M Valuation**<br>(SAFE Security parent valuation) | AI-native exposure discovery and cyber risk quantification (now part of SAFE's unified CRQ/CTEM platform). | AWS Marketplace baseline for Balbix lists at **$145,000/year** (AI Assistant tier) to **$220,000/year** (10,000 assets full platform). | **No free tier or public trial**; evaluation conducted via guided personalized platform demos and scheduled enterprise POCs. |
+| **[Hadrian](https://hadrian.io/)** | **$65M Total Raised**<br>($40M Series B, Oct 2026) | Autonomous offensive security; Atlas continuous external ASM and Nova on-demand AI penetration testing. | Nova pentests start at **€1,250 per test** (~$1,350/test excl. VAT); continuous Atlas ASM priced via annual enterprise contracts. | **No self-serve free trial**; offers a free preliminary external attack surface discovery report and personalized live demo. |
+| **[Skybox Security](https://www.skyboxsecurity.com/)** *(Liquidated / Assets Acquired)* | **Assets acquired by Tufin**<br>(Historically PE-backed / ~$30M–$85M rev) | Security posture management with network mapping and firewall rule compliance analysis. | Historical Skybox CertiFire baseline started at **€595/firewall/year** (10-license pack); broad enterprise deployments custom-quoted. | **No free tier or trial** (Operations liquidated; former customer base serviced via Tufin migration programs). |
 
 ## Open-Source GitHub Projects
 
