@@ -81,7 +81,7 @@ The following commercial CTEM platforms and exposure management engines are rank
 
 To assemble a self-hosted Continuous Threat Exposure Management pipeline, security teams rely on specialized open-source tools across all 5 CTEM stages (Asset Discovery, Vulnerability Analysis, Attack Path Mapping, Exposure Validation, and Unified Prioritization).
 
-The repositories below are ranked in **descending order by GitHub Stars_Count**. Each badge links directly to the repository's stargazers page:
+The repositories below are ranked in **descending order by GitHub_Stars_Count**. Each badge links directly to the repository's stargazers page:
 
 ### 🏆 Top Open-Source Projects (Ranked by GitHub_Stars ⭐)
 
@@ -119,7 +119,7 @@ Contributions are warmly encouraged! Help expand this resource to keep Continuou
 2. 🌿 **Create a feature branch**: `git checkout -b feature/new-ctem-tool`.
 3. 📝 **Add or update an entry** in `README.md`:
    - Follow the established table formatting.
-   - For open-source tools, include the official GitHub Stars_Badge formatted as `[![Stars](https://img.shields.io/github/stars/{owner}/{repo}?style=social&color=white)](https://github.com/{owner}/{repo}/stargazers)`.
+   - For open-source tools, include the official GitHub_Stars_Badge formatted as `[![Stars](https://img.shields.io/github/stars/{owner}/{repo}?style=social&color=white)](https://github.com/{owner}/{repo}/stargazers)`.
    - Ensure the repository is inserted in its correct position based on total Stars_Count.
 4. 🚀 **Commit your changes**: `git commit -m "Add new CTEM project"`.
 5. 📬 **Open a Pull Request** with a concise description of the tool and why it aligns with the CTEM framework.
